@@ -1,9 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using CollegeCoursePrerequisites.DomainModel;
+using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CollegeCoursePrerequisites.UnitTests
 {
@@ -63,7 +60,7 @@ namespace CollegeCoursePrerequisites.UnitTests
 
         private static Course CreateCourse(string name)
         {
-            return new Course();
+            return new Course(name);
         }
 
         private static string GetName()

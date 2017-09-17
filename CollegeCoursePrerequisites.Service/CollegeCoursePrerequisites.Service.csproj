@@ -42,6 +42,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CollegeCoursePrerequisites.DomainModel\CollegeCoursePrerequisites.DomainModel.csproj">
+      <Project>{f43c57a4-fbb8-4b44-bb62-ccbe4495f085}</Project>
+      <Name>CollegeCoursePrerequisites.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -54,6 +54,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CollegeCoursePrerequisites.Service\CollegeCoursePrerequisites.Service.csproj">
+      <Project>{f53b904a-26b7-45bf-9a6a-45624dc7cf96}</Project>
+      <Name>CollegeCoursePrerequisites.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
