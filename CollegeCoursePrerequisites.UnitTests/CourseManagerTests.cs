@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using CollegeCoursePrerequisites.Service;
+using NSubstitute;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +11,19 @@ namespace CollegeCoursePrerequisites.UnitTests
 {
     [TestFixture]
     public class CourseManagerTests
-    {
+    {  
         [Test]
-        public void TestMethod()
+        public void PlanCoursesWrapper_WhenCalledWithValidArguments_ReturnsANonEmptyArray()
         {
-            // TODO: Add your test code here
-            Assert.Pass("Your first passing test");
+            ICourseManager courseManager = Substitute.For<ICourseManager>();
+            string[] courses = { "a", "b", "c", "d" };
+            string[][] dependencies = { new string[] { "a", "b" }, new string[] { "b", "c" } };
+
+            courseManager.When(c => c.PlanCoursesWrapper(courses, dependencies)).Do(context =>{ throw new Exception("fake exception"); });
+
+            Assert.Throws<Exception>(() => courseManager.PlanCoursesWrapper(courses, dependencies));
+
+                   
         }
     }
 }

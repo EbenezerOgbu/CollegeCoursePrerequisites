@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseManager.cs" />
     <Compile Include="ICourseManager.cs" />
     <Compile Include="IPrepareCoursesForInput.cs" />
+    <Compile Include="PrepareCoursesForInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
